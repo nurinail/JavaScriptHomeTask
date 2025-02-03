@@ -175,24 +175,64 @@ function filterArray(arr, filterFn) {}
 // - pul çıxarma
 // - balans yoxlama
 // - əməliyyat tarixçəsi
+let depositInput = document.querySelector(".depositInput");
+let withdrawInput = document.querySelector(".withdrawInput");
+let depositBtn = document.querySelector(".depositBtn");
+let widtdrawBtn = document.querySelector(".widtdrawBtn");
+let account = document.querySelector(".account");
+let balance = document.querySelector(".balance");
+let historyArr = [];
 let bankAccount = {
-  accountNumber: 0,
-  name: "nail",
-  balanse: 0,
-  //   transaction: [
-  //     bankAccount.accountNumber,
-  //     bankAccount.name,
-  //     bankAccount.balanse,
-  //   ],
+  account: 1234567,
+  user: "Nail Nuri",
+  balance: 0,
+  transaction: [],
 };
-bankAccount.accountNumber = 21;
-bankAccount.accountNumber = 29;
-console.log(`
-    hesab ${bankAccount.accountNumber} 
-    ad ${bankAccount.name} 
-    balans ${bankAccount.balanse} 
-    əməliyyatlar ${bankAccount.transaction}
-    `);
+account.innerHTML = `
+  <h2 class="ad">${bankAccount.user}</h2>
+    <p class="balance">Balans ${bankAccount.balance}</p>
+    <div class="history">
+      <h2>Son əməliyyat</h2>
+      <pre class="transaction">
+      məxaric ${withdrawInput.value}
+      mədaxil ${depositInput.value}
+      </pre>
+  
+    </div>
+    `;
+depositBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let inputValue = Number(depositInput.value);
+  bankAccount.balance += inputValue;
+  bankAccount.transaction.push(`Mədaxil ${depositInput.value}`);
+  updateUI();
+  depositInput.value = "";
+});
+widtdrawBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let inputValue = Number(withdrawInput.value);
+  bankAccount.balance -= inputValue;
+  bankAccount.transaction.push(`Məxaric ${withdrawInput.value}`);
+
+  updateUI();
+  depositInput.value = "";
+});
+
+function updateUI() {
+  account.innerHTML = `
+  <h2 class="ad">${bankAccount.user}</h2>
+    <p class="balance"> Balans ${bankAccount.balance}</p>
+    <div class="history">
+      <h2>Son əməliyyat</h2>
+      <pre class="transaction">
+     Son məxaric ${withdrawInput.value}
+     Son mədaxil ${depositInput.value}
+      </pre>
+  
+    </div>
+    `;
+  console.log(bankAccount.transaction);
+}
 
 // ----------- Tapşırıq 5 ----------------
 
@@ -289,68 +329,59 @@ function simpleNumber(n) {
 simpleNumber(101);
 // 4. Pattern çap edən proqram (ulduzlarla üçbucaq)
 
-
 // ----------- Tapşırıq 6 ----------------
 // HTML:
 
-
 // Tələb olunan əməliyyatlar:
 // 1. getElementById ilə elementi tapın və mətnini dəyişin
-let container=document.getElementById("container");
-container.children[0].innerHTML="Salam Nail";
-container.children[1].innerHTML="Bu bir ul-in listləridir";
-container.children[2].children[0].innerHTML="Element_1_";
-container.children[2].children[1].innerHTML="Element_2_";
-container.children[2].children[2].innerHTML="Element_3_";
+let container = document.getElementById("container");
+container.children[0].innerHTML = "Salam Nail";
+container.children[1].innerHTML = "Bu bir ul-in listləridir";
+container.children[2].children[0].innerHTML = "Element_1_";
+container.children[2].children[1].innerHTML = "Element_2_";
+container.children[2].children[2].innerHTML = "Element_3_";
 
 // 2. querySelector ilə elementi tapın və class əlavə edin
-let title=document.querySelector(".title");
+let title = document.querySelector(".title");
 title.classList.add("titleOne");
-console.log(title)
+console.log(title);
 
 // 3. Yeni element yaradın və DOM-a əlavə edin
-let list=document.querySelector("#list");
-let newElementt=document.createElement("li");
-newElementt.innerHTML="Element_4_";
+let list = document.querySelector("#list");
+let newElementt = document.createElement("li");
+newElementt.innerHTML = "Element_4_";
 list.append(newElementt);
 // 4. Elementi silin
 list.children[0].remove();
 // 5. Element attributlarını dəyişin
-let textP=document.querySelector(".text");
-textP.setAttribute("class","changeText");
+let textP = document.querySelector(".text");
+textP.setAttribute("class", "changeText");
 console.log(textP);
-
 
 // ----------- Tapşırıq 7 ----------------
 
 // 1. Click event handler
-document.getElementById('button').addEventListener('click', function() {
-    let divElement=document.querySelector(".tableDiv");
-divElement.innerHTML="Salam Aleykum"
+document.getElementById("button").addEventListener("click", function () {
+  let divElement = document.querySelector(".tableDiv");
+  divElement.innerHTML = "Salam Aleykum";
 });
 
 // 2. Form submission
-let textInput=document.getElementById("textInput");
-let paragraph=document.querySelector(".paragraph")
-document.getElementById('myForm').addEventListener('submit', function(e) {
+let textInput = document.getElementById("textInput");
+let paragraph = document.querySelector(".paragraph");
+document.getElementById("myForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  let name=textInput.value;
-  paragraph.innerHTML=name;
-
+  let name = textInput.value;
+  paragraph.innerHTML = name;
 });
 
 // 3. Klaviatura eventləri
-document.addEventListener('keydown', function(e) {
+document.addEventListener("keydown", function (e) {
   e.preventDefault();
-  paragraph.innerHTML+=e.key
+  paragraph.innerHTML += e.key;
 });
 
 // 4. Mouse eventləri
-textInput.addEventListener('mouseover', function(e) {
-textInput.style.backgroundColor="red"
+textInput.addEventListener("mouseover", function (e) {
+  textInput.style.backgroundColor = "red";
 });
-
-
-
-
-
