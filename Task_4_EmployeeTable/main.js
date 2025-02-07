@@ -38,6 +38,8 @@ function writeData() {
     let changeFullName = e.children[1].children[0];
     let changeAge = e.children[2].children[0];
     let changePositin = e.children[3].children[0];
+    let changeInputs=document.querySelectorAll(".tableInputforChange");
+
     changeBtn.addEventListener("click", (ev) => {
       ev.preventDefault();
       changeFullName.toggleAttribute("disabled");
@@ -78,9 +80,9 @@ function setNewUser(e) {
     positionInput.value = "";
   }
   if (setNewUser) {
-    if (fullNameInput.value.length > 30 && fullNameInput.value.length < 3) {
+    if (fullNameInput.value.length > 30 || fullNameInput.value.length < 3) {
       warningText.innerHTML = "Ad və Soyad 3 və 30 simvol sayı arası olmalıdır";
-    } else if (ageInput.value <= 18 && ageInput.value >= 65) {
+    } else if (ageInput.value <= 18 || ageInput.value >= 65) {
       warningText.innerHTML = "Yaş 18-dən kiçik 65-dən böyük ola bilməz";
     } else if (
       !positionInput.value ||
@@ -92,9 +94,9 @@ function setNewUser(e) {
       userId += 1;
       let newUser = new Employee(
         userId,
-        fullNameInput.value,
-        ageInput.value,
-        positionInput.value
+        (fullNameInput.value).trim(),
+        Number(ageInput.value),
+        positionInput.value.trim()
       );
       usersArr.push(newUser);
       console.log(usersArr);

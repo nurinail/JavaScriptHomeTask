@@ -104,6 +104,8 @@ input:focus{
             text-align: center;
             border: 1px solid #eef0f1;
             background-color: transparent;
+            gap: 5px;
+
 
             .tableUsersAboutUlTitle {
               padding-block: 4px;
@@ -116,6 +118,9 @@ input:focus{
                 border: none;
                 background-color: transparent;
                 text-align: center;
+              }
+              .tableInputforChangeActive{
+                border: 1px solid #eef0f1;
               }
             }
             .tableUsersAboutUlTitle:last-child {
