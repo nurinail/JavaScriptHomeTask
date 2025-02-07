@@ -1,0 +1,170 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: 1px solid #eef0f1;
+}
+
+.container {
+  font-size: 16px;
+  padding: 5px 20px;
+  width: 100%;
+}
+.container .main .main_employeeSystem {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_title {
+  background-color: #f8f9fa;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  padding-bottom: 50px;
+  gap: 15px;
+  border: 2px solid #939494;
+  position: relative;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form .warning {
+  position: absolute;
+  top: 20px;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-size: 14px;
+  color: red;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form .main_employeeSystem_forAdd_form_title {
+  font-weight: 600;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form .main_employeeSystem_forAdd_form_inputs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form .main_employeeSystem_forAdd_form_inputs .main_employeeSystem_forAdd_form_input {
+  padding: 6px 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #939494;
+}
+.container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form .addButton {
+  background-color: #0d6efd;
+  color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.container .main .main_employeeSystem .tableUsers {
+  display: flex;
+  flex-direction: column;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersTitle {
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr 6fr 5fr;
+  text-align: center;
+  background-color: #b5cbed;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersTitle .tableUsersTitleItem {
+  padding-block: 8px;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl {
+  display: grid;
+  grid-template-columns: 1fr 5fr 3fr 6fr 5fr;
+  text-align: center;
+  border: 1px solid #eef0f1;
+  background-color: transparent;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl .tableUsersAboutUlTitle {
+  padding-block: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl .tableUsersAboutUlTitle .tableInputforChange {
+  width: 100%;
+  padding: 4px 4px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl .tableUsersAboutUlTitle:last-child {
+  gap: 10px;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl .tableUsersAboutUlTitle:last-child .tableBtn {
+  border: none;
+  background-color: #198754;
+  width: 60px;
+  padding-block: 6px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl .tableUsersAboutUlTitle:last-child .changeBtn::before {
+  content: "Düzəliş";
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl .tableUsersAboutUlTitle:last-child .changeBtnactive::before {
+  content: "Saxla";
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl .tableUsersAboutUlTitle:last-child .removeBtn {
+  background-color: red;
+}
+.container .main .main_employeeSystem .tableUsers .tableUsersAbout .tableUsersAboutUl:nth-child(even) {
+  background-color: #eef0f1;
+}
+
+@media screen and (max-width: 762px) {
+  .container .main .main_employeeSystem {
+    grid-template-columns: 1fr;
+  }
+  .container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_title {
+    margin-inline: auto;
+  }
+  .container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form {
+    width: 100%;
+    align-items: center;
+  }
+  .container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form .main_employeeSystem_forAdd_form_inputs {
+    flex-direction: column;
+  }
+  .container .main .main_employeeSystem .main_employeeSystem_forAdd .main_employeeSystem_forAdd_form .main_employeeSystem_forAdd_form_inputs .main_employeeSystem_forAdd_form_input {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
