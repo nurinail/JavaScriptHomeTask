@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  li {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  button {
+    border: none;
+  }
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input:focus{
+    outline: 1px solid #eef0f1;
+  }
+  .container {
+    font-size: 16px;
+    padding: 5px 20px;
+    width: 100%;
+    .main {
+      
+      .main_employeeSystem { 
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+  
+        .main_employeeSystem_forAdd {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 10px;
+          .main_employeeSystem_forAdd_title {
+            background-color: #f8f9fa;
+            height: 40px;
+            display: flex;
+            align-items: center;
+          }
+          .main_employeeSystem_forAdd_form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+            padding-bottom: 50px;
+            gap: 15px;
+            border: 2px solid #939494;
+            position: relative;
+            .warning{
+              position: absolute;
+              top: 20px;
+              right: 50%;
+              transform: translate(50%,-50%);
+              font-size: 14px;
+              color: red;
+            }
+            .main_employeeSystem_forAdd_form_title {
+              font-weight: 600;
+            }
+            .main_employeeSystem_forAdd_form_inputs {
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 10px;
+              .main_employeeSystem_forAdd_form_input {
+                padding: 6px 5px;
+                background-color: #f8f9fa;
+                border: 1px solid #939494;
+              }
+              .employeeSelect{
+                .employeeSelectOptionActive{
+                  background-color: rgb(55, 168, 74);
+                }
+              }
+            }
+            .addButton {
+              background-color: #0d6efd;
+              color: white;
+              width: 100px;
+              height: 35px;
+              border-radius: 6px;
+              cursor: pointer;
+            }
+          }
+        }
+        .tableUsers {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         .tableUsers_title{
+          width: 100%;
+          text-align: center;
+          display: grid;
+          grid-template-columns: 1fr 5fr 2fr 5fr 3fr 4fr;
+          gap: 10px;
+          min-height: 30px;
+          .tableUsers_title_item{
+            padding-top: 5px;
+            text-align: center;
+            white-space: nowrap;
+            overflow-x: auto;
+          }
+          .tableUsers_title_item::-webkit-scrollbar{
+            display: none;
+          }
+          
+         }
+         .tableUsersDiv{
+          width: 100%;
+          .tableUsers_list{
+            width: 100%;
+          text-align: center;
+          display: grid;
+          grid-template-columns: 1fr 5fr 2fr 5fr 3fr 4fr;
+          gap: 10px;
+          min-height: 30px;
+          .tableUsers_list_item{
+            padding-top: 5px;
+            text-align: center;
+            white-space: nowrap;
+            overflow-x: auto;
+          }
+          .tableUsers_list_item::-webkit-scrollbar{
+            display: none;
+          }
+          .tableUsers_list_item:last-child{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            // border: 1px solid red;
+            .listBtn{
+              width: 60px;
+              border: none;
+              padding-block: 4px;
+              background-color: green;
+              color: white;
+              border-radius: 6px;
+              cursor: pointer;
+            }
+            .removeBtn{
+              background-color: red;
+            }
+          }
+          }
+         }
+         .tableUsers_title{
+          background-color: rgb(248, 249, 250);
+          font-weight: bold;
+        }
+         
+        }
+      }
+    }
+  }
+  
+  
+  
+  

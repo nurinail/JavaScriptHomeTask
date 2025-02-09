@@ -38,7 +38,7 @@ function writeData() {
     let changeFullName = e.children[1].children[0];
     let changeAge = e.children[2].children[0];
     let changePositin = e.children[3].children[0];
-    let changeInputs=document.querySelectorAll(".tableInputforChange");
+    // let changeInputs=document.querySelectorAll(".tableInputforChange");
 
     changeBtn.addEventListener("click", (ev) => {
       ev.preventDefault();

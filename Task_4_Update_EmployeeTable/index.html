@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="container">
+        <main class="main">
+          <section class="main_employeeSystem">
+            <div class="main_employeeSystem_forAdd">
+              <h2 class="main_employeeSystem_forAdd_title">
+                İşçi İdarəetmə Sistemi
+              </h2>
+              <form class="main_employeeSystem_forAdd_form" action="">
+                <span class="warning"></span>
+                <h3 class="main_employeeSystem_forAdd_form_title">
+                  Yeni İşçi Əlavə Et
+                </h3>
+                <div class="main_employeeSystem_forAdd_form_inputs">
+                  <input
+                    class="main_employeeSystem_forAdd_form_input main_employeeSystem_forAdd_form_inputFullName"
+                    type="text"
+                    placeholder="Ad və Soyad"/>
+                  <input
+                    class="main_employeeSystem_forAdd_form_input main_employeeSystem_forAdd_form_inputAge"
+                    type="Number"
+                    placeholder="Yaş"/>
+                  <input
+                    class="main_employeeSystem_forAdd_form_input main_employeeSystem_forAdd_form_inputPosition"
+                    type="text"
+                    placeholder="Vəzifə"/>
+                    <select class="main_employeeSystem_forAdd_form_input employeeSelect" name="" id="employeeSelect">
+                      <option class="employeeSelectOption" value="Soft" disabled selected>Dil Bacarıqları</option>
+                      <option class="employeeSelectOption" value="Aze">Azərbaycan</option>
+                      <option class="employeeSelectOption" value="ENG">English</option>
+                      <option class="employeeSelectOption" value="TUS">Rus</option>
+                      <option class="employeeSelectOption" value="TR">Turk</option>
+                      <option class="employeeSelectOption" value="GRY">Germany</option>
+                    </select>
+                </div>
+                <button class="addButton" type="submit">Əlavə et</button> 
+              </form>
+            </div>
+            
+              <div class="tableUsers">
+                <ul class="tableUsers_title">
+                  <li class="tableUsers_title_item">№</li>
+                  <li class="tableUsers_title_item">Ad və Soyad</li>
+                  <li class="tableUsers_title_item">Yaş</li>
+                  <li class="tableUsers_title_item">Vəzifə</li>
+                  <li class="tableUsers_title_item">Dil Bilikləri</li>
+                  <li class="tableUsers_title_item">Əməliyyatlar</li>
+                </ul>
+                <div class="tableUsersDiv">
+                  <!-- <ul class="tableUsers_list">
+                    <li class="tableUsers_list_item">1</li>
+                    <li class="tableUsers_list_item">Nail Nuri Natiq Nuriyeddbcn</li>
+                    <li class="tableUsers_list_item">22</li>
+                    <li class="tableUsers_list_item">Baytar elmləri doktoru</li>
+                    <li class="tableUsers_list_item">English Turk Rus Germany</li>
+                    <li class="tableUsers_list_item"><button class="listBtn changeBtn">Düzəliş</button><button class="listBtn removeBtn">Sil</button></li>
+                  </ul> -->
+                </div>
+              </div>
+
+          </section>
+        </main>
+      </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
