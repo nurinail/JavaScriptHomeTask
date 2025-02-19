@@ -48,10 +48,10 @@ function change() {
     e.addEventListener("click", () => {
       let parentElement = e.parentElement.parentElement;
       let listItem = parentElement.children;
-      listItem[1].toggleAttribute("contenteditable", "true");
-      listItem[2].toggleAttribute("contenteditable", "true");
-      listItem[3].toggleAttribute("contenteditable", "true");
-      listItem[4].toggleAttribute("contenteditable", "true");
+      listItem[1].setAttribute("contenteditable", "true");
+      listItem[2].setAttribute("contenteditable", "true");
+      listItem[3].setAttribute("contenteditable", "true");
+      listItem[4].setAttribute("contenteditable", "true");
     });
   });
 }

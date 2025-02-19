@@ -10,7 +10,7 @@ function Employee(userId, fullName, age, position) {
 let usersArr = [];
 let userId = 0;
 function writeData() {
-  employeeTable.innerHTML = usersArr
+  employeeTable.innerHTML = usersArr 
     .map(
       (even, index) =>
         `
